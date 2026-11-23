@@ -15,14 +15,6 @@ Analiza la estructura de tu proyecto, identifica patrones y genera un resumen de
 
 ---
 
-## 📸 Demostración
-
-*(Aquí iría un GIF o captura de pantalla de la extensión en acción. Ej: mostrando el comando en la paleta de VS Code y el archivo generado).*
-
-![Demo de AI Project Auditor](https://via.placeholder.com/800x400?text=Captura+de+la+extension+en+VS+Code)
-
----
-
 ## 📥 Instalación
 
 1. Abre VS Code.
