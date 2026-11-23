@@ -1,14 +1,36 @@
 {
   "name": "ai-project-auditor",
-  "displayName": "ai-project-auditor",
-  "description": "Auditor de proyectos para IA",
-  "version": "0.0.1",
+  "displayName": "AI Project Auditor",
+  "description": "Audita tu proyecto y genera contexto listo para asistentes de IA.",
+  "version": "1.0.0",
+  "publisher": "paonsaphir",
+  "license": "MIT",
+  "icon": "images/icon.png",
   "engines": {
-    "vscode": "^1.145.0"
+    "vscode": "^1.146.0"
   },
   "categories": [
+    "Linters",
+    "Programming Languages",
     "Other"
   ],
+  "keywords": [
+    "ai",
+    "audit",
+    "context",
+    "llm",
+    "prompt",
+    "typescript",
+    "productivity"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PaonSaphir/ai-project-auditor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PaonSaphir/ai-project-auditor/issues"
+  },
+  "homepage": "https://github.com/PaonSaphir/ai-project-auditor#readme",
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
