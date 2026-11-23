@@ -1,71 +1,56 @@
-# ai-project-auditor README
+# 🤖 AI Project Auditor
 
-This is the README for your extension "ai-project-auditor". After writing up a brief description, we recommend including the following sections.
+> **Extensión de VS Code para auditar proyectos y generar contexto optimizado para IA.**
 
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Analiza la estructura de tu proyecto, identifica patrones y genera un resumen de contexto listo para alimentar a modelos de lenguaje (LLMs) o para documentación automática.
 
 ---
 
-## Following extension guidelines
+## ✨ Características
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+- 🔍 **Auditoría rápida**: Escanea tu espacio de trabajo en busca de archivos clave.
+- 📝 **Generación de contexto**: Crea un archivo `CONTEXT.md` o `PROMPT.md` optimizado para IA.
+- ⚙️ **Configurable**: Ignora archivos automáticamente usando tu `.gitignore`.
+- 🚀 **Ligero y rápido**: Escrito en TypeScript, sin dependencias pesadas.
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+---
 
-## Working with Markdown
+## 📸 Demostración
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+*(Aquí iría un GIF o captura de pantalla de la extensión en acción. Ej: mostrando el comando en la paleta de VS Code y el archivo generado).*
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+![Demo de AI Project Auditor](https://via.placeholder.com/800x400?text=Captura+de+la+extension+en+VS+Code)
 
-## For more information
+---
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+## 📥 Instalación
 
-**Enjoy!**
+1. Abre VS Code.
+2. Ve a la vista de Extensiones (`Ctrl+Shift+X`).
+3. Busca `AI Project Auditor` (o instala desde el archivo `.vsix` si aún no está en el Marketplace).
+4. Haz clic en **Instalar**.
+
+---
+
+## 🚀 Cómo usar
+
+1. Abre tu proyecto en VS Code.
+2. Abre la Paleta de Comandos (`Ctrl+Shift+P` o `Cmd+Shift+P` en Mac).
+3. Escribe y selecciona: **`AI Auditor: Generate Project Context`**.
+4. La extensión escaneará tu proyecto y generará el archivo de contexto en la raíz.
+
+### Comandos disponibles
+- `AI Auditor: Generate Project Context`: Genera el archivo de contexto principal.
+- `AI Auditor: Clean Context`: Elimina archivos de contexto generados previamente.
+
+---
+
+## ⚙️ Configuración
+
+Esta extensión no requiere configuración inicial, pero puedes personalizarla en `settings.json`:
+
+```json
+{
+  "aiProjectAuditor.outputFileName": "PROMPT.md",
+  "aiProjectAuditor.includeComments": true
+}
