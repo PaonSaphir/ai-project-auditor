@@ -1,48 +1,29 @@
 # 🤖 AI Project Auditor
 
-> **Extensión de VS Code para auditar proyectos y generar contexto optimizado para IA.**
+> Extensión de VS Code para **auditar proyectos** y generar **contexto listo para asistentes de IA**.
 
-Analiza la estructura de tu proyecto, identifica patrones y genera un resumen de contexto listo para alimentar a modelos de lenguaje (LLMs) o para documentación automática.
+Escanea tu espacio de trabajo, detecta errores y advertencias con los diagnósticos de VS Code, y produce un índice que puedes pegar directamente en una IA para darle contexto de tu proyecto.
 
 ---
 
 ## ✨ Características
 
-- 🔍 **Auditoría rápida**: Escanea tu espacio de trabajo en busca de archivos clave.
-- 📝 **Generación de contexto**: Crea un archivo `CONTEXT.md` o `PROMPT.md` optimizado para IA.
-- ⚙️ **Configurable**: Ignora archivos automáticamente usando tu `.gitignore`.
-- 🚀 **Ligero y rápido**: Escrito en TypeScript, sin dependencias pesadas.
+- 🔍 Escanea los archivos de código de la primera carpeta abierta.
+- 🧠 Reconoce archivos de **TypeScript, JavaScript, Python, C/C++, C#, Java, Kotlin, Scala, Rust, Go, Ruby, PHP, Swift, Objective-C, Shell, SQL, Lua y Dart**.
+- 🚫 Excluye automáticamente `node_modules`, `.git`, `out`, `dist`, `build` y `.audit`.
+- 📊 Consulta los diagnósticos de VS Code y contabiliza errores y advertencias.
+- ⏳ Muestra una barra de progreso **cancelable** durante el análisis.
+- 📦 Genera `.audit/audit.json` (datos estructurados) y `.audit/INDEX.md` (resumen legible).
+- 📋 Copia el índice al **portapapeles** al terminar, listo para pegar en una IA.
 
 ---
 
 ## 📥 Instalación
 
-1. Abre VS Code.
-2. Ve a la vista de Extensiones (`Ctrl+Shift+X`).
-3. Busca `AI Project Auditor` (o instala desde el archivo `.vsix` si aún no está en el Marketplace).
-4. Haz clic en **Instalar**.
-
----
-
-## 🚀 Cómo usar
-
-1. Abre tu proyecto en VS Code.
-2. Abre la Paleta de Comandos (`Ctrl+Shift+P` o `Cmd+Shift+P` en Mac).
-3. Escribe y selecciona: **`AI Auditor: Generate Project Context`**.
-4. La extensión escaneará tu proyecto y generará el archivo de contexto en la raíz.
-
-### Comandos disponibles
-- `AI Auditor: Generate Project Context`: Genera el archivo de contexto principal.
-- `AI Auditor: Clean Context`: Elimina archivos de contexto generados previamente.
-
----
-
-## ⚙️ Configuración
-
-Esta extensión no requiere configuración inicial, pero puedes personalizarla en `settings.json`:
-
-```json
-{
-  "aiProjectAuditor.outputFileName": "PROMPT.md",
-  "aiProjectAuditor.includeComments": true
-}
+**Desde el código fuente**
+```bash
+git clone https://github.com/PaonSaphir/ai-project-auditor.git
+cd ai-project-auditor
+npm install
+npm run compile
+code .
